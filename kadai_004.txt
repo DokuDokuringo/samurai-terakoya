@@ -1,0 +1,39 @@
+kotaro@ozakiisrounoAir ~ % cd Desktop
+kotaro@ozakiisrounoAir Desktop % cd git_challenge
+kotaro@ozakiisrounoAir git_challenge % git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /Users/kotaro/Desktop/git_challenge/.git/
+kotaro@ozakiisrounoAir git_challenge % echo "Hello, world!" >> hello_world.txt
+dquote> 
+kotaro@ozakiisrounoAir git_challenge % echo Hello, world! >> hello_world.txt 
+kotaro@ozakiisrounoAir git_challenge % git add .
+kotaro@ozakiisrounoAir git_challenge % git commit -m "hello_worldを追加"
+[master (root-commit) b570487] hello_worldを追加
+ 2 files changed, 1 insertion(+)
+ create mode 100644 .DS_Store
+ create mode 100644 hello_world.txt
+kotaro@ozakiisrounoAir git_challenge % echo こんにちは、世界！ >> hello_world,txt
+kotaro@ozakiisrounoAir git_challenge % git add .
+kotaro@ozakiisrounoAir git_challenge % git commit -m "日本語訳を追記"
+[master 3467a1c] 日本語訳を追記
+ 1 file changed, 1 insertion(+)
+kotaro@ozakiisrounoAir git_challenge % git co -b main
+Switched to a new branch 'main'
+kotaro@ozakiisrounoAir git_challenge % git branch
+* main
+  master
+kotaro@ozakiisrounoAir git_challenge % git branch -d master
+Deleted branch master (was 3467a1c).
+kotaro@ozakiisrounoAir git_challenge % git log --oneline
+3467a1c (HEAD -> main) 日本語訳を追記
+b570487 hello_worldを追加
+kotaro@ozakiisrounoAir git_challenge % 
